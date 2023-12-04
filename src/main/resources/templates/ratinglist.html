@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Rating List</title>
+</head>
+<body>
+
+<h2>Rating List</h2>
+
+<table border="1">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>User ID</th>
+    <th>Stars</th>
+    <th>Comment</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="rating : ${ratings}">
+    <td th:text="${rating.id}"></td>
+    <td th:text="${rating.user.id}"></td>
+    <td th:text="${rating.stars}"></td>
+    <td th:text="${rating.comment}"></td>
+  </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
